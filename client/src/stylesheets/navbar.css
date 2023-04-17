@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+.navbar {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #11999E;
+    color: #E4F9F5;
+}
+
+.navbar h1 {
+    font-size: 2.7rem;
+    padding-left: 30px;
+    font-family: 'La Belle Aurore', cursive;
+}
+
+.navbar a, .logout, .notiffs {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    color: #E4F9F5;
+}
+
+
+.logout, .notiffs {
+    text-decoration: none;
+    background: none;
+    border-style: none;
+}
+
+.logout:hover, .notiffs:hover {
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    background-color: #0d5d6053;
+    border-radius: 10px;
+    width: 40%;
+    justify-content:space-evenly;
+    height: 75px;
+}
+
+.links img {
+    width: 50px;
+    height: 50px;
+}
+
+.links > div {
+    height:60px;
+    padding-right: 10px;
+}
+
+.links > a:hover, .links > div:hover {
+    background-color: #E4F9F5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.links-first:hover::after {
+    content: 'Home';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.links-second:hover::after {
+    content: 'Explore';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 10px;
+}
+.links-third:hover::after {
+    content: 'Post';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.links-message:hover::after {
+    content: 'Messages';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.links-fourth:hover::after {
+    content: 'Notifications';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.links-fifth:hover::after {
+    content: 'Profile';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 12px;
+}
+
+.links-last:hover::after {
+    content: 'Logout';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.links-fourth, .links-last {
+    margin-bottom: 10px;
+}
+
+.links-about:hover::after {
+    content: 'About';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.links-feedback:hover::after {
+    content: 'Feedback';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.links-signup:hover::after {
+    content: 'Sign-Up';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.links-login:hover::after {
+    content: 'Login';
+    font-weight: 500;
+    color: #11999E;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 15px;
+}
+
+
+/*------------------Notifications--------------------*/
+
+.notif-popup-outer {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.notif-popup-body {
+    position: relative;
+    left: 60%;
+    top: 80px;
+    padding: 32px;
+    width: 25%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    max-width: 450px;
+
+}
+
+.notif-popup-body > div {
+    margin-top: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notif-popup-body > div::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notif-popup-body > div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.notif-popup-body > div::-webkit-scrollbar-thumb {
+  background: #40514E;
+  border-radius: 10px;
+}
+
+
+.notif-popup-body .close-btn {
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.notif {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #cbdcd960;
+}
+
+.notif img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.notif p {
+    font-size: 1.2rem;
+    color: #40514E;
+    margin-left: 10px;
+    margin-top: 15px;
+    word-break: break-all;
+    margin-right: 10px;
+}
+
+.notif span {
+    color: #11999E;
+    cursor: pointer;
+}
+
+.notif-empty {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.notif-empty h4 {
+    color: #40514E;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.notif-clear {
+    position: absolute;
+    top: 17px;
+    left: 30px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.notif-clear:hover{
+    cursor: pointer;
+    color:#E4F9F5;
+    background-color: #f1356d;
+}
